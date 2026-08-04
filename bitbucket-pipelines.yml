@@ -19,7 +19,7 @@
 # Requires Pipelines to be ENABLED on the repository (Repository settings ->
 # Pipelines -> Settings). It is off by default, even with this file present.
 
-image: node:18
+image: node:22
 
 definitions:
   steps:
@@ -32,7 +32,7 @@ definitions:
           # for the current shell -- export it explicitly.
           - curl -fsSL https://cli.nullplatform.com/install.sh | sh
           - export PATH="$HOME/.local/bin:$PATH"
-          # `make package` needs zip, which node:18 does not ship.
+          # `make package` needs zip, which node:22 does not ship.
           - apt-get update && apt-get install -y --no-install-recommends zip
           - np build start
           # Build parameters: on GitHub the "Get build parameters" step

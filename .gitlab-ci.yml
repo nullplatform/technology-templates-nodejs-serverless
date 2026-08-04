@@ -21,7 +21,7 @@ include:
   - remote: 'https://raw.githubusercontent.com/nullplatform/gitlab-pipelines/main/nullplatform-asset-lambda-create.yml'
   - remote: 'https://raw.githubusercontent.com/nullplatform/gitlab-pipelines/main/nullplatform-asset-lambda-build.yml'
     inputs:
-      ci-image: "node:18-alpine"
+      ci-image: "node:22-alpine"
       ci-before-script: "apk add --no-cache zip make"
   - remote: 'https://raw.githubusercontent.com/nullplatform/gitlab-pipelines/main/nullplatform-asset-lambda-push.yml'
     inputs:
